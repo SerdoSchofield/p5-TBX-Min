@@ -1,0 +1,77 @@
+NAME
+    TBX::Min - Read, write and edit TBX-Min files
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+            use TBX::Min;
+            my $min = TBX::Min->new('/path/to/file.tbx');
+            my $concepts = $min->concepts;
+
+DESCRIPTION
+    TBX-Min is a minimal, DCT-style dialect of TBX. This module allows you
+    to read, write and edit the contents of TBX-Min data.
+
+METHODS
+  "new_from_xml"
+    Creates a new instance of TBX::Min. The single argument should be either
+    a string pointer containing the TBX-Min XML data or the name of the file
+    containing this data is required.
+
+  "new"
+    Creates a new "TBX::Min" instance. Optionally you may pass in a hash
+    reference which is used to initialize the object. The allowed hash
+    fields are "title", "origin", "license", "directionality", "source_lang"
+    and "target_lang", which correspond to methods of the same name, and
+    "concepts", which should be an array reference containing
+    "TBX::Min::ConceptEntry" objects.
+
+  "title"
+    Get or set the document title.
+
+  "origin"
+    Get or set the document origin string (a note about or the title of the
+    document's origin).
+
+  "license"
+    Get or set the document license string.
+
+  "directionality"
+    Get or set the document directionality string. This string represents
+    the direction of translation this document is designed for.
+
+  "source_lang"
+    Get or set the document source language (abbreviation) string.
+
+  "target_lang"
+    Get or set the document target language (abbreviation) string.
+
+  "doc_lang"
+    Get or set the language used in the document outside of "LangGroup"
+    contents (such as in the title or origin strings.) This should be an
+    abbreviation such as "en".
+
+  "concepts"
+    Returns an array ref containing the "TBX::Min::ConceptEntry" objects
+    contained in the document.The array ref is the same one used to store
+    the objects internally, so additions or removals from the array will be
+    reflected in future calls to this method.
+
+  "add_concept"
+    Adds the input "TBX::Min::LangGroup" object to the list of language
+    groups contained by this object.
+
+  "as_xml"
+    Returns a string pointer containing an XML representation of this
+    TBX-Min document.
+
+AUTHOR
+    Nathan Glenn <garfieldnate@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Alan Melby.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
