@@ -39,7 +39,7 @@ version 0.01
 =head1 SYNOPSIS
 
     use TBX::Min::TermGroup;
-    my $termGrp = TBX::Min::TermGroup->new(
+    my $term_grp = TBX::Min::TermGroup->new(
         {term => 'bat signal', status => "preferred"});
     $term_grp->part_of_speech('noun');
     $term_grp->customer('GCPD');

@@ -80,7 +80,7 @@ version 0.01
     my $concept = TBX::Min::ConceptEntry->new(
         {id => 'B001'});
     print $concept->id(); # 'B001'
-    my $lang_grp = TBX::Min::LangGroup->new(...);
+    my $lang_grp = TBX::Min::LangGroup->new({code => 'en'});
     $concept->add_lang_group($lang_grp);
     my $lang_grps = $concept->lang_groups;
     print $#$lang_grps; # '1'

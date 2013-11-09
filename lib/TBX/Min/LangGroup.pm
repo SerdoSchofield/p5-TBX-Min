@@ -72,7 +72,7 @@ version 0.01
     my $lang_grp = TBX::Min::LangGroup->new(
         {code => 'en'});
     print $lang_grp->lang(); # 'en'
-    my $term_grp = TBX::Min::TermGroup->new(...);
+    my $term_grp = TBX::Min::TermGroup->new({term => 'perl'});
     $lang_grp->add_term_group($term_grp);
     my $term_grps = $lang_grp->term_groups;
     print $#$term_grps; # '1'
