@@ -68,6 +68,7 @@ version 0.01
 =head1 SYNOPSIS
 
     use TBX::Min::LangGroup;
+    use TBX::Min::TermGroup;
     my $lang_grp = TBX::Min::LangGroup->new(
         {code => 'en'});
     print $lang_grp->lang(); # 'en'

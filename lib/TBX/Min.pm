@@ -329,7 +329,7 @@ sub _langStart {
 # Create a new termGroup, add it to the current langGroup,
 # and set it as the current termGroup.
 sub _termGrpStart {
-	my ($twig, $node) = @_;
+	my ($twig) = @_;
 	my $term = TBX::Min::TermGroup->new();
 	$twig->{tbx_min_current_lang_grp}->add_term_group($term);
 	$twig->{tbx_min_current_term_grp} = $term;

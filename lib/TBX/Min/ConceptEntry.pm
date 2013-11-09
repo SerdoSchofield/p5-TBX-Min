@@ -76,6 +76,7 @@ version 0.01
 =head1 SYNOPSIS
 
     use TBX::Min::ConceptEntry;
+    use TBX::Min::LangGroup;
     my $concept = TBX::Min::ConceptEntry->new(
         {id => 'B001'});
     print $concept->id(); # 'B001'
