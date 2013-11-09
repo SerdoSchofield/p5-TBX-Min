@@ -294,10 +294,6 @@ x_Dist_Zilla:
       name: InstallGuide
       version: 1.200000
     -
-      class: Dist::Zilla::Plugin::Signature
-      name: Signature
-      version: 1.100930
-    -
       class: Dist::Zilla::Plugin::Manifest
       name: Manifest
       version: 4.300039
